@@ -1,0 +1,21 @@
+
+
+@mixin breakpoint($device){
+    @media screen and (max-width:map-get($breakpoints, $device)){
+        @content;
+    }
+}
+
+@mixin flex_center($direction : row){
+    display:flex;
+    flex-direction:$direction;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex_start($direction : row){
+    display:flex;
+    flex-direction:$direction;
+    justify-content: flex-start;
+    align-items: center;
+}

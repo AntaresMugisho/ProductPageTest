@@ -1,0 +1,43 @@
+
+
+.navbar{
+    display:flex;
+    justify-content: space-between;
+    padding: 1rem $main_margin;
+    border-bottom:4px inset $accent-color;
+    box-shadow: 0 4px 16px 16px rbg(0, 0, 0);
+
+    .nav-brand{
+        font-weight:300;
+        font-size:fontSize(level_3);
+
+        span:nth-child(1){
+            color:$accent_color;
+            font-weight: 900;
+        }
+    }
+
+    .nav-menu{
+        @include flex_center;
+        list-style-type: none;
+        gap:50px;
+        font-size: fontSize(normal);
+    }
+
+    .nav-menu .nav-link{
+        transition: color $transition_duration ease-in;
+
+        &.active{
+            color:$accent-color;
+            font-weight: 700;
+        }
+
+        &:hover{
+            color:$accent-color;
+        }
+    }
+
+    .nav-menu .btn{
+        margin-left:2rem;
+    }
+}

@@ -1,0 +1,34 @@
+
+
+// VARS
+
+// Colors
+$primary_color:#F3F3F3;
+$secondary_color:#444444;
+$accent_color:#FF8A00;
+
+// Spacing
+$main_margin:5%;
+
+// Duration
+$transition_duration : 0.2s;
+
+
+// LISTS & MAPS
+
+//Font size
+$font_size:(
+    level_1: 8rem,
+    level_2: 5.56rem,
+    level_3: 3.4rem,
+    normal: 2rem,
+);
+
+// Breakpoint
+$breakpoints: (
+    mobile: 480px,
+    tablet: 768px,
+    laptop: 978px,
+    desktop: 1024px
+    );
+
