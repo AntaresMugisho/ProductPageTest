@@ -1,18 +1,31 @@
 
 .btn{
     @include flex_center;
+    padding: 4px 16px;
+    height: 40px;
+    border-radius: 30px;
+    transition: background-color $transition_duration;
 
     &-default{
         font-size: fontSize(normal);
         color:#fff;
         background-color: $accent-color;
-        padding: 4px 16px;
-        height: 40px;
-        border-radius: 30px;
-        transition: background-color $transition_duration;
 
         &:hover{
             background-color: darken($color: $accent_color, $amount: 3);
+        }
+    }
+
+    &-outline{
+        font-size: fontSize(normal);
+        color:$accent_color;
+        background-color: #fff;
+        border:2px solid $accent_color;
+        
+
+        &:hover{
+            // color:#f1f1f1;
+            background-color: #efefef;
         }
     }
 }

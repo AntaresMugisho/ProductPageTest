@@ -67,5 +67,34 @@
 // Main product details
 
 .product-main-details{
-    
+    @include flex_center(column);
+    gap:16px;
+    background-color: #fff;
+    border-radius: 12px;
+    width:500px;
+    padding:24px;
+
+    .detail{
+        @include flex_start;
+        gap:16px;
+        background-color: lighten($color: $accent_color, $amount: 46);
+        font-size: 1.8rem;
+        padding: 4px 16px;
+        border-radius: 4px;
+        width:100%;
+
+        i{
+            font-size: 3rem;
+        }
+
+        p:nth-last-child(1){
+            min-width: 104px;
+            margin-left: auto;
+            background-color: #fff;
+            font-weight: 700;
+            padding:4px 8px;
+            border-radius: 4px;
+        }
+    }
+
 }
