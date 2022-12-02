@@ -1,0 +1,17 @@
+footer{
+    @include flex_center(column);
+    gap:16px;
+    font-size: 1.8rem;
+    background-color: $secondary_color;
+    padding:40px;
+
+    *{
+        color:#f1f1f1;
+    }
+    a{
+        transition: color $transition_duration;
+    }
+    a:hover{
+        color:$accent_color;
+    }
+}

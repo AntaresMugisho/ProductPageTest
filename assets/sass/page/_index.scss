@@ -5,15 +5,15 @@ main{
 
 .main-content{
     display:grid;
-    grid-template-columns: repeat(2, 500px);
+    grid-template-columns: repeat(2, 1fr);
     grid-gap:30px;
     padding:6rem $main_margin;
+
     .product-name{
         font-size:fontSize(level_3);
         font-weight:300;
     }
 }
-
 
 // Image wrapper
 .wrapper{
@@ -302,5 +302,4 @@ main{
     ul li:nth-child(even){
         background-color: lighten($accent_color, 46);
     }
-
 }
