@@ -33,7 +33,6 @@
         gap:50px;
         font-size: fontSize(normal);
 
-        // Responsive
         @include breakpoint(tablet){
             gap:20px;
         }
@@ -51,12 +50,12 @@
             top:10vh;
             right:0;
             
-            // transform: translateX(100%) scale(0);
+            transform: translateX(100%) scale(0);
             transition: transform $transition_duration;
     
             &--show{
                 border-radius:0;
-                transform: translateX(0);
+                transform: translateX(0) scale(1);
                 z-index:1000; 
             }
         }
@@ -80,7 +79,8 @@
     }
 
     .humburger{
-        font-size: 2.3rem;
+        font-weight: 700;
+        font-size: 5rem;
         display: none;
 
         @include breakpoint(mobile){

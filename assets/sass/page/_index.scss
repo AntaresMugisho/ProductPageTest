@@ -10,13 +10,26 @@
     @include breakpoint(tablet){
         grid-template-columns: repeat(auto-fit, 340px);
         grid-gap:10px;
+    }
 
+    @include breakpoint(mobile){
+        width:100%;
+        grid-template-columns: 1;
+        grid-auto-rows:auto;
+        grid-gap:0;
+        grid-row-gap:10px;
+        padding:100px 5% 40px;
     }
 
     .product-name{
         font-size:fontSize(level_3);
         font-weight:300;
         grid-column: span 2;
+
+        @include breakpoint(mobile){
+            grid-column: 1;
+        }
+        
     }
 }
 
@@ -88,7 +101,6 @@
     gap:16px;
     background-color: #fff;
     border-radius: 12px;
-    // width:500px;
     padding:24px;
 
     .detail{
@@ -119,11 +131,16 @@
 .product-info{
     grid-column: 2;
     grid-row: 2 / span 2;
+
+    @include breakpoint(mobile){
+        grid-column: 1;
+        grid-row: 4;
+    }
+
     @include flex_start(column);
     gap:32px;
     background-color: #fff;
     border-radius: 12px;
-    // width:500px;
     padding:24px;
 
     h3, p{
@@ -198,7 +215,6 @@
     border-radius:8px;
     box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
 
-
     .price .amount{
         font-size: fontSize(level_3);
     }
@@ -224,6 +240,10 @@
             border-radius: 4px;
             padding:8px;
 
+            @include breakpoint(mobile){
+                width:90px;
+                height: 90px;
+            }
 
             &:hover{
                 border-color:#ccc;
@@ -296,15 +316,14 @@
     }
 
     .btn{
-        width: 100%;
-        align-self: center;
+        width: 90%;
         justify-self: center;
     }
 }
 
 
-//All product details
 
+//All product details
 .all-product-details{
     grid-column: 1 / span 2;
     background-color: #fff;
@@ -314,6 +333,16 @@
     display: flex;
     flex-wrap: wrap;
     gap:24px;
+
+    @include breakpoint(mobile){
+        grid-column: 1;
+    }
+
+    ul{
+        @include breakpoint(mobile){
+            width:100%;
+        }
+    }
 
     ul li{
         display: grid;
