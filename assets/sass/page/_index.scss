@@ -1,11 +1,13 @@
+main{
+    @include flex_center;
+    background-color: $primary_color;
+}
 
 .main-content{
     display:grid;
-    grid-template-columns: minmax(200px, 500px);
+    grid-template-columns: repeat(2, 500px);
     grid-gap:30px;
-    background-color: $primary_color;
     padding:6rem $main_margin;
-
     .product-name{
         font-size:fontSize(level_3);
         font-weight:300;
@@ -274,5 +276,31 @@
     background-color: #fff;
     border-radius: 12px;
     padding:24px;
+    font-size: 1.8rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap:24px;
+    max-width:1020px;
+
+    ul li{
+        display: grid;
+        grid-template-columns:repeat(2, 1fr);
+        grid-gap:12px;
+        padding:4px;
+        border-radius:4px;
+
+        span:nth-child(2){
+            font-weight: 300;
+        }
+    }
+
+    ul li:nth-child(1){
+        color:$accent_color;
+        font-weight: 700;
+    }
+
+    ul li:nth-child(even){
+        background-color: lighten($accent_color, 46);
+    }
 
 }
