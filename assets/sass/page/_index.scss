@@ -1,10 +1,13 @@
 
 .main-content{
+    display:grid;
+    grid-template-columns: minmax(200px, 500px);
+    grid-gap:30px;
     background-color: $primary_color;
     padding:6rem $main_margin;
 
     .product-name{
-        font-size:fontSize(level_2);
+        font-size:fontSize(level_3);
         font-weight:300;
     }
 }
@@ -12,9 +15,10 @@
 
 // Image wrapper
 .wrapper{
+    grid-column: 1;
     @include flex_center;
     gap:40px;
-    width: max-content;
+    width: 500px;
     padding:20px 20px 60px;
     background-color: #fff;
     border-radius:12px;
@@ -27,7 +31,7 @@
         font-size: fontSize(normal);
 
         &:hover{
-            color:$accent-color;
+            color:$accent_color;
             background-color: #f1f1f1;
             box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
         }
@@ -64,9 +68,9 @@
     }
 }
 
-// Main product details
-
+// Main product details 
 .product-main-details{
+    grid-column: 1;
     @include flex_center(column);
     gap:16px;
     background-color: #fff;
@@ -77,7 +81,7 @@
     .detail{
         @include flex_start;
         gap:16px;
-        background-color: lighten($color: $accent_color, $amount: 46);
+        background-color: lighten($color: $accent_color, $amount: 40);
         font-size: 1.8rem;
         padding: 4px 16px;
         border-radius: 4px;
@@ -96,5 +100,179 @@
             border-radius: 4px;
         }
     }
+}
+
+// Product pay info
+.product-info{
+    grid-column: 2;
+    grid-row: 2 / span 2;
+    @include flex_start(column);
+    gap:32px;
+    background-color: #fff;
+    border-radius: 12px;
+    width:500px;
+    padding:24px;
+
+    h3, p{
+        font-size: fontSize(normal);
+        color:$secondary_color;
+    }
+
+    .specifications{
+        @include flex_center;
+        gap:8px;
+    }
+}
+
+.product-info .spec{
+    padding:12px;
+    background-color: rgba(33, 149, 243, 0.1);
+    border:1px solid $primary_color;
+    border-left:4px solid $accent_color;
+    border-radius:8px;
+    font-size: 1.6rem;
+
+    span{
+        display: block;
+        font-size: fontSize(normal);
+        font-weight: 700;
+    }
+
+    &:nth-child(1){
+        background-color: rgba(33, 149, 243, 0.1);
+        border-left-color:#2196F3;
+        span{
+            color:#2196F3;
+        }
+    }
+
+    &:nth-child(2){
+        background-color: rgba(0, 173, 43, 0.1);
+        border-left-color:#00ad2b;
+        span{
+            color:#00ad2b
+        }
+    }
+
+    &:nth-child(3){
+        background-color: rgba(173, 0, 158, 0.1);
+        border-left-color:#ad009e;
+        span{
+            color:#ad009e
+        }
+    }
+}
+
+.product-info .price-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width:92%;
+    padding:12px;
+    border:1px solid $primary_color;
+    background-color: rgba(33, 149, 243, 0.1);
+    border-bottom:4px solid #2196F3;
+    border-radius:8px;
+
+    .price .amount{
+        font-size: fontSize(level_3);
+    }
+}
+
+.product-info .choose-colors{
+    @include flex_start;
+    gap:12px;
+    padding:32px 0;
+
+    label{
+        @include flex_center(column);
+        cursor:pointer;
+        font-size:fontSize(normal);
+        position:relative;
+        max-width: 100px;
+
+        img{
+            width:100px;
+            height:100px;
+            object-fit: contain;
+            border:2px solid #eee;
+            border-radius: 4px;
+
+            &:hover{
+                border-color:#ccc;
+            }
+
+            &:hover ~ .checkmark{
+                background-color: #ccc;
+            }
+
+            &:hover ~ .checkmark::after{
+                display: block;
+                border-color: #f2f2f29c;
+            }
+        }
+
+        // Custom checkbox
+        .checkmark {
+            position: absolute;
+            top: 3px;
+            right: 3px;
+            height: 20px;
+            width: 20px;
+            background-color: #eee;
+            border-radius: 50%;
+
+            &::after{
+                content:"";
+                position:absolute;
+            }
+        }
+    }
+
+    label input{
+        position:absolute;
+        opacity:0;
+
+        &:checked ~ .checkmark{
+            background-color: $accent_color;
+        }
+
+        &:checked ~ img{
+            border-color:$accent_color;
+            border-width:2px;
+        }
+    }
+
+    label input[type=radio] ~ .checkmark::after{
+        display: block;
+        left: 4px;
+        top: 4px;
+        width: 12px;
+        height: 12px;
+        border: solid;
+        border-width: 3px;
+        border-color: #eee;
+        border-radius:50%;
+    }
+}
+
+.product-info .finalize{
+    @include flex_start(column);
+    gap:20px;
+
+    input[type=number]{
+        font-size:fontSize(normal);
+        padding:0 12px;
+    }
+}
+
+
+//All product details
+
+.all-product-details{
+    grid-column: 1 / span 2;
+    background-color: #fff;
+    border-radius: 12px;
+    padding:24px;
 
 }

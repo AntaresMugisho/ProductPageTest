@@ -16,6 +16,12 @@
 @mixin flex_start($direction : row){
     display:flex;
     flex-direction:$direction;
-    justify-content: flex-start;
-    align-items: center;
+    justify-content: start;
+    
+    @if ($direction == row){
+        align-items: center;
+    }
+    @else{
+        align-items: start; 
+    }
 }
