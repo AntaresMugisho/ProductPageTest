@@ -3,6 +3,7 @@
 .navbar{
     display:flex;
     justify-content: space-between;
+    align-items: center;
     padding: 1rem $main_margin;
     border-bottom:4px inset $accent-color;
     background-color: #fff;
@@ -11,6 +12,10 @@
     position:fixed;
     width:100%;
     z-index: 100;
+
+    @include breakpoint(tablet){
+        padding:2rem 5%;
+    }
 
     .nav-brand{
         font-weight:300;
@@ -27,6 +32,34 @@
         list-style-type: none;
         gap:50px;
         font-size: fontSize(normal);
+
+        // Responsive
+        @include breakpoint(tablet){
+            gap:20px;
+        }
+
+        @include breakpoint(mobile){
+    
+            @include flex_center(column);
+            
+            background-color: rgba(255, 255, 255, 0.95);
+            width: 100%;
+            height:90vh;
+            border-top-left-radius: 100%;
+            border-bottom-left-radius: 100%;
+            position:absolute;
+            top:10vh;
+            right:0;
+            
+            // transform: translateX(100%) scale(0);
+            transition: transform $transition_duration;
+    
+            &--show{
+                border-radius:0;
+                transform: translateX(0);
+                z-index:1000; 
+            }
+        }
     }
 
     .nav-menu .nav-link{
@@ -44,6 +77,15 @@
 
     .nav-menu .btn{
         margin-left:2rem;
+    }
+
+    .humburger{
+        font-size: 2.3rem;
+        display: none;
+
+        @include breakpoint(mobile){
+            display: block;
+        }
     }
 }
 

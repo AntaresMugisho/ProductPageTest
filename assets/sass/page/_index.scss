@@ -1,18 +1,22 @@
-main{
-    @include flex_center;
-    background-color: $primary_color;
-    padding-top:60px;
-}
 
 .main-content{
     display:grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, 500px);
     grid-gap:30px;
-    padding:6rem $main_margin;
+    padding:100px $main_margin;
+    justify-content: center;
+    background-color: $primary_color;
+
+    @include breakpoint(tablet){
+        grid-template-columns: repeat(auto-fit, 340px);
+        grid-gap:10px;
+
+    }
 
     .product-name{
         font-size:fontSize(level_3);
         font-weight:300;
+        grid-column: span 2;
     }
 }
 
@@ -20,16 +24,20 @@ main{
 .wrapper{
     grid-column: 1;
     @include flex_center;
-    gap:40px;
-    width: 500px;
+    gap:4rem;
     padding:20px 20px 60px;
     background-color: #fff;
     border-radius:12px;
     position:relative;
 
+    @include breakpoint(tablet){
+        gap:10px;
+    }
+
     .zap-btn{
         width: 40px;
         height: 40px;
+        min-width: 40px;
         border-radius: 50%;
         font-size: fontSize(normal);
 
@@ -46,7 +54,9 @@ main{
         overflow-x: hidden;
     
         img{
-            width:300px;
+            width:100%;
+            height:100%;
+            object-fit: cover;
         }
     }
 
@@ -78,7 +88,7 @@ main{
     gap:16px;
     background-color: #fff;
     border-radius: 12px;
-    width:500px;
+    // width:500px;
     padding:24px;
 
     .detail{
@@ -113,7 +123,7 @@ main{
     gap:32px;
     background-color: #fff;
     border-radius: 12px;
-    width:480px;
+    // width:500px;
     padding:24px;
 
     h3, p{
@@ -123,18 +133,27 @@ main{
 
     .specifications{
         display:flex;
+        flex-wrap: wrap;
         justify-content: space-between;
         width:100%;
+
+        @include breakpoint(tablet){
+            gap:16px;
+        }
     }
 }
 
 .product-info .spec{
+    font-size: 1.6rem;
     padding:12px;
     background-color: rgba(33, 149, 243, 0.1);
-    border:1px solid $primary_color;
-    border-left:4px solid $accent_color;
     border-radius:8px;
-    font-size: 1.6rem;
+    border-left:4px solid $accent_color;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
+
+    @include breakpoint(tablet){
+        width:100%;
+    }
 
     span{
         display: block;
@@ -174,9 +193,11 @@ main{
     width:100%;
     padding:12px;
     border:1px solid $primary_color;
-    background-color: rgba(33, 149, 243, 0.1);
+    background-color: #fff;
     border-bottom:4px solid #2196F3;
     border-radius:8px;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
+
 
     .price .amount{
         font-size: fontSize(level_3);
@@ -201,6 +222,8 @@ main{
             object-fit: contain;
             border:2px solid #eee;
             border-radius: 4px;
+            padding:8px;
+
 
             &:hover{
                 border-color:#ccc;
@@ -216,7 +239,7 @@ main{
             }
         }
 
-        // Custom checkbox
+        // Custom checkmark for input:radio
         .checkmark {
             position: absolute;
             top: 3px;
@@ -257,6 +280,7 @@ main{
         border-width: 3px;
         border-color: #eee;
         border-radius:50%;
+        
     }
 }
 
@@ -266,7 +290,9 @@ main{
 
     input[type=number]{
         font-size:fontSize(normal);
-        padding:0 12px;
+        border:2px solid $secondary_color;
+        border-radius: 8px;
+        padding:8px;
     }
 
     .btn{
@@ -288,13 +314,12 @@ main{
     display: flex;
     flex-wrap: wrap;
     gap:24px;
-    width:100%;
-    max-width:1024px;
 
     ul li{
         display: grid;
         grid-template-columns:repeat(2, 1fr);
-        grid-gap:12px;
+        grid-column-gap:12px;
+        justify-content: center;
         padding:4px;
         border-radius:4px;
 
