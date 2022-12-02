@@ -63,8 +63,14 @@
 
     .image-container{
         @include flex_start;
+        width:300px;
+        height:230px;
         max-width: 300px;
         overflow-x: hidden;
+
+        @include breakpoint(mobile){
+            overflow-x: scroll;
+        }
     
         img{
             width:100%;
@@ -75,15 +81,14 @@
 
     .nav-btns{
         @include flex_center;
-        gap:12px;
+        gap:8px;
         position:absolute;
         bottom:24px;
 
-
         .nav-btn{
-            width:32px;
-            height:8px;
-            border-radius: 2px;
+            width:24px;
+            height:6px;
+            border-radius: 3px;
             background-color:darken($primary_color, 10);
         }
 
