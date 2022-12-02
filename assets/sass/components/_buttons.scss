@@ -1,31 +1,36 @@
 
 .btn{
     @include flex_center;
-    padding: 4px 16px;
-    height: 40px;
+    width: max-content;
+    height: 50px;
+    padding: 8px 36px;
     border-radius: 30px;
-    transition: background-color $transition_duration;
+    font-size: fontSize(normal);
+    transition: color $transition_duration,
+                background-color $transition_duration,
+                font-weight $transition_duration;
 
     &-default{
-        font-size: fontSize(normal);
         color:#fff;
         background-color: $accent-color;
 
         &:hover{
             background-color: darken($color: $accent_color, $amount: 3);
+            font-weight: 600;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, .3);
         }
     }
 
     &-outline{
-        font-size: fontSize(normal);
         color:$accent_color;
         background-color: #fff;
         border:2px solid $accent_color;
         
-
         &:hover{
-            // color:#f1f1f1;
-            background-color: #efefef;
+            color:#f1f1f1;
+            background-color: $accent_color;
+            font-weight: 600;
+
         }
     }
 }

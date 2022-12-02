@@ -1,6 +1,7 @@
 main{
     @include flex_center;
     background-color: $primary_color;
+    padding-top:60px;
 }
 
 .main-content{
@@ -112,7 +113,7 @@ main{
     gap:32px;
     background-color: #fff;
     border-radius: 12px;
-    width:500px;
+    width:480px;
     padding:24px;
 
     h3, p{
@@ -121,8 +122,9 @@ main{
     }
 
     .specifications{
-        @include flex_center;
-        gap:8px;
+        display:flex;
+        justify-content: space-between;
+        width:100%;
     }
 }
 
@@ -169,7 +171,7 @@ main{
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    width:92%;
+    width:100%;
     padding:12px;
     border:1px solid $primary_color;
     background-color: rgba(33, 149, 243, 0.1);
@@ -266,6 +268,12 @@ main{
         font-size:fontSize(normal);
         padding:0 12px;
     }
+
+    .btn{
+        width: 100%;
+        align-self: center;
+        justify-self: center;
+    }
 }
 
 
@@ -280,7 +288,8 @@ main{
     display: flex;
     flex-wrap: wrap;
     gap:24px;
-    max-width:1020px;
+    width:100%;
+    max-width:1024px;
 
     ul li{
         display: grid;

@@ -5,7 +5,12 @@
     justify-content: space-between;
     padding: 1rem $main_margin;
     border-bottom:4px inset $accent-color;
-    box-shadow: 0 4px 16px 16px rbg(0, 0, 0);
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
+    
+    position:fixed;
+    width:100%;
+    z-index: 100;
 
     .nav-brand{
         font-weight:300;
@@ -39,5 +44,22 @@
 
     .nav-menu .btn{
         margin-left:2rem;
+    }
+}
+
+.nav-link.cart{
+    position:relative;
+
+    .cart-counter{
+        @include flex_center;
+        width:20px;
+        height:20px;
+        border-radius: 50%;
+        background-color: rgb(3, 167, 3);
+        color:#fff;
+
+        position:absolute;
+        top:-4px;
+        right:-16px;
     }
 }
