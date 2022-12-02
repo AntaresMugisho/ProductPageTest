@@ -40,14 +40,14 @@
         @include breakpoint(mobile){
     
             @include flex_center(column);
-            
+            font-size: fontSize(level_3);
             background-color: rgba(255, 255, 255, 0.95);
             width: 100%;
-            height:90vh;
+            height:89vh;
             border-top-left-radius: 100%;
             border-bottom-left-radius: 100%;
             position:absolute;
-            top:10vh;
+            top:11vh;
             right:0;
             
             transform: translateX(100%) scale(0);
