@@ -1,6 +1,7 @@
 //+--------------------------------+
 //| NAV MENU ON MOBILE             |
 //+--------------------------------+
+
 // Humburger menu toggle on mobile
 const humburger = document.querySelector(".humburger")
 humburger.addEventListener("click", toggle_menu)
@@ -35,7 +36,7 @@ prev_btn.addEventListener("click", ()=>{
     
     if (img_container.scrollLeft == 1191){
         img_container.scrollLeft -= 191
-        // 1191 is the max scrollLeft value
+        // 1191 is the max scrollLeft value in my case
     }
     else{
         img_container.scrollLeft -= 200
@@ -81,7 +82,6 @@ nav_btns.forEach((nav_btn, i) => {
         img_container.scrollLeft = i*200
     })
 })
-
 
 //+--------------------------------+
 //| PRICE INCREASE                 |
