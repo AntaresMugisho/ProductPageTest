@@ -1,4 +1,4 @@
-# SmartPhone
+# SmartFone
 SmartFone is an onepage website created as part of a competition organized by *Le Designer du Web.*
 
 ## Disclaimer
