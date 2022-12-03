@@ -150,9 +150,6 @@ html {
 .navbar .nav-menu .nav-link:hover {
   color: #FF8A00;
 }
-.navbar .nav-menu .btn {
-  margin-left: 2rem;
-}
 .navbar .mobile-icons {
   font-weight: 700;
   font-size: 2.4rem;
