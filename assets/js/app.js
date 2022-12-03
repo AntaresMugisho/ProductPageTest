@@ -75,8 +75,24 @@ img_container.addEventListener("scroll", ()=>{
 })
 
 // Scroll onclick on active image indicator buttons
+
 nav_btns.forEach((nav_btn, i) => {
     nav_btn.addEventListener("click", ()=>{
         img_container.scrollLeft = i*200
     })
+})
+
+
+//+--------------------------------+
+//| PRICE INCREASE                 |
+//+--------------------------------+
+const unit_price = document.getElementById("unit_price").innerText
+const quantity = document.getElementById("quantity")
+const total_amount = document.getElementById("total_amount")
+
+// Initialize the total price label
+total_amount.innerText = unit_price
+
+quantity.addEventListener("input", ()=>{
+    total_amount.innerText = (quantity.value != 0)? quantity.value * unit_price : unit_price
 })
