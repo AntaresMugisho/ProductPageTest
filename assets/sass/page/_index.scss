@@ -30,10 +30,13 @@
         @include breakpoint(mobile){
             grid-column: 1;
             padding-left:8px;
+            font-size:fontSize(level_4);
         }
     }
 }
 
+
+//-------------------
 // Image wrapper
 .wrapper{
     grid-column: 1;
@@ -75,7 +78,7 @@
         }
     
         img{
-            // width:100%;  // These doesn't work in Firefox
+            // width:100%;  // These don't work in Firefox, don't know why.
             // height:100%; 
             width:200px;
             height:230px;
@@ -98,11 +101,12 @@
 
         .nav-btn.active{
             background-color: $accent_color;
-
         }
     }
 }
 
+
+//-------------------
 // Main product details 
 .product-main-details{
     grid-column: 1;
@@ -114,7 +118,9 @@
 
     @include breakpoint(mobile){
         gap:8px;
+
         .btn{
+            margin-top:12px;
             width:100%;
         }
     }
@@ -143,6 +149,8 @@
     }
 }
 
+
+//-------------------
 // Product pay info
 .product-info{
     grid-column: 2;
@@ -159,7 +167,6 @@
         grid-row: 4;
         gap:16px;
     }
-
 
     h3, p{
         font-size: fontSize(normal);
@@ -314,7 +321,6 @@
         border-width: 3px;
         border-color: #eee;
         border-radius:50%;
-        
     }
 }
 
@@ -341,6 +347,7 @@
 }
 
 
+//-------------------
 //All product details
 .all-product-details{
     grid-column: 1 / span 2;

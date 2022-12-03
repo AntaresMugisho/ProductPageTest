@@ -1,3 +1,5 @@
+
+
 //+--------------------------------+
 //| NAV MENU ON MOBILE             |
 //+--------------------------------+
@@ -19,6 +21,7 @@ for (const nav_link of nav_links){
     nav_link.addEventListener("click", toggle_menu)
 }
  
+
 //+--------------------------------+
 //| IMAGE CONTAINER (SLIDER)       |
 //+--------------------------------+
@@ -75,17 +78,18 @@ img_container.addEventListener("scroll", ()=>{
     }
 })
 
-// Scroll onclick on active image indicator buttons
-
+// Scroll if active image indicator button is clicked
 nav_btns.forEach((nav_btn, i) => {
     nav_btn.addEventListener("click", ()=>{
         img_container.scrollLeft = i*200
     })
 })
 
+
 //+--------------------------------+
 //| PRICE INCREASE                 |
 //+--------------------------------+
+
 const unit_price = document.getElementById("unit-price").innerText
 const quantity = document.getElementById("quantity")
 const total_amount = document.getElementById("total-amount")
@@ -93,6 +97,7 @@ const total_amount = document.getElementById("total-amount")
 // Initialize the total price label
 total_amount.innerText = unit_price
 
+// Increase total price on quantity input
 quantity.addEventListener("input", ()=>{
-    total_amount.innerText = (quantity.value != 0)? quantity.value * unit_price : unit_price
+    total_amount.innerText = (quantity.value != 0) ? quantity.value * unit_price : unit_price
 })

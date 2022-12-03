@@ -1,3 +1,5 @@
+
+
 footer{
     @include flex_center(column);
     gap:16px;
@@ -9,9 +11,11 @@ footer{
     *{
         color:#f1f1f1;
     }
+
     a{
         transition: color $transition_duration;
     }
+
     a:hover{
         color:$accent_color;
     }

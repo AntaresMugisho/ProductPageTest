@@ -1,7 +1,5 @@
 
 
-// VARS
-
 // Colors
 $primary_color:#F3F3F3;
 $secondary_color:#333;
@@ -21,15 +19,14 @@ $font_size:(
     level_1: 8rem,
     level_2: 5.56rem,
     level_3: 3.4rem,
-    level_4:2.4rem,
+    level_4: 2.4rem,
     normal: 1.6rem,
 );
 
-// Breakpoint
+// Breakpoint - used for responsive design
 $breakpoints: (
     mobile: 480px,
     tablet: 768px,
     laptop: 978px,
     desktop: 1024px
     );
-
