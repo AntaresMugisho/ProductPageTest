@@ -1,7 +1,8 @@
 footer{
     @include flex_center(column);
     gap:16px;
-    font-size: 1.8rem;
+    font-size: fontSize(normal);
+    text-align: center;
     background-color: $secondary_color;
     padding:40px;
 

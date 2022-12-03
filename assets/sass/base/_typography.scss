@@ -2,16 +2,5 @@
 
 html {
     font-family: 'Source Sans Pro', sans-serif;
-    // Convertion : 1rem == 10px*
-    font-size: 62.5%;
-
-    @include breakpoint(tablet) {
-        // Convertion : 1rem == 8px
-        font-size: 50%;
-    }
-
-    @include breakpoint(mobile) {
-        // Convertion : 1rem == px
-        font-size: 37.5%;
-    }
+    font-size: 62.5%; // Convertion : 1rem == 10px*
 }

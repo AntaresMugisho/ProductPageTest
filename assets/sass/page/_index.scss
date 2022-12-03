@@ -28,6 +28,7 @@
 
         @include breakpoint(mobile){
             grid-column: 1;
+            padding-left:8px;
         }
         
     }
@@ -109,17 +110,24 @@
     border-radius: 12px;
     padding:24px;
 
+    @include breakpoint(mobile){
+        gap:8px;
+        .btn{
+            width:100%;
+        }
+    }
+    
     .detail{
         @include flex_start;
-        gap:16px;
+        gap:12px;
         background-color: lighten($color: $accent_color, $amount: 40);
-        font-size: 1.8rem;
+        font-size: fontSize(normal);
         padding: 4px 16px;
         border-radius: 4px;
         width:100%;
 
         i{
-            font-size: 3rem;
+            font-size: fontSize(normal);
         }
 
         p:nth-last-child(1){
@@ -138,16 +146,18 @@
     grid-column: 2;
     grid-row: 2 / span 2;
 
-    @include breakpoint(mobile){
-        grid-column: 1;
-        grid-row: 4;
-    }
-
     @include flex_start(column);
     gap:32px;
     background-color: #fff;
     border-radius: 12px;
     padding:24px;
+
+    @include breakpoint(mobile){
+        grid-column: 1;
+        grid-row: 4;
+        gap:16px;
+    }
+
 
     h3, p{
         font-size: fontSize(normal);
@@ -157,17 +167,13 @@
     .specifications{
         display:flex;
         flex-wrap: wrap;
-        justify-content: space-between;
+        gap:16px;
         width:100%;
-
-        @include breakpoint(tablet){
-            gap:16px;
-        }
     }
 }
 
 .product-info .spec{
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     padding:12px;
     background-color: rgba(33, 149, 243, 0.1);
     border-radius:8px;
@@ -320,13 +326,17 @@
         border-radius: 8px;
         padding:8px;
     }
+    
+    .total-amount{
+        font-weight: 700;
+        font-size: fontSize(level_4);
+    }
 
     .btn{
-        width: 90%;
+        width: 100%;
         justify-self: center;
     }
 }
-
 
 
 //All product details
@@ -336,9 +346,11 @@
     border-radius: 12px;
     padding:24px;
     font-size: 1.8rem;
-    display: flex;
-    flex-wrap: wrap;
-    gap:24px;
+
+    display:grid;
+    grid-template-columns: repeat(auto-fit, 300px);
+    justify-content: center;
+    grid-gap:16px;
 
     @include breakpoint(mobile){
         grid-column: 1;
@@ -357,6 +369,7 @@
         justify-content: center;
         padding:4px;
         border-radius:4px;
+        font-size: fontSize(normal);
 
         span:nth-child(2){
             font-weight: 300;
@@ -364,6 +377,7 @@
     }
 
     ul li:nth-child(1){
+        display: block;
         color:$accent_color;
         font-weight: 700;
     }

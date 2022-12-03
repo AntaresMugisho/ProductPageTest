@@ -30,7 +30,11 @@
             color:#f1f1f1;
             background-color: $accent_color;
             font-weight: 600;
-
         }
+    }
+
+    i{
+        margin:0 12px;
+        font-size: fontSize(level_4);
     }
 }

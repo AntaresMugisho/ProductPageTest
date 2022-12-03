@@ -21,6 +21,10 @@
         font-weight:300;
         font-size:fontSize(level_3);
 
+        @include breakpoint(mobile){
+            font-size: fontSize(level_4);
+        }
+
         span:nth-child(1){
             color:$accent_color;
             font-weight: 900;
@@ -38,16 +42,15 @@
         }
 
         @include breakpoint(mobile){
-    
             @include flex_center(column);
-            font-size: fontSize(level_3);
+            font-size: fontSize(level_4);
             background-color: rgba(255, 255, 255, 0.95);
             width: 100%;
-            height:89vh;
+            height:100vh;
             border-top-left-radius: 100%;
             border-bottom-left-radius: 100%;
             position:absolute;
-            top:11vh;
+            top:75px;
             right:0;
             
             transform: translateX(100%) scale(0);
@@ -56,7 +59,7 @@
             &--show{
                 border-radius:0;
                 transform: translateX(0) scale(1);
-                z-index:1000; 
+                z-index:10; 
             }
         }
     }
@@ -80,7 +83,7 @@
 
     .mobile-icons{
         font-weight: 700;
-        font-size: 4rem;
+        font-size: fontSize(level_4);
         display: none;
 
         @include breakpoint(mobile){
@@ -91,7 +94,6 @@
             .cart-counter{
                 left:20px;
                 top:-2px;
-                font-size:2.2rem;
                 font-weight: 400;
             }
         }
@@ -109,6 +111,7 @@
     border-radius: 50%;
     background-color: rgb(3, 167, 3);
     color:#fff;
+    font-size: fontSize(normal);
 
     position:absolute;
     top:-4px;

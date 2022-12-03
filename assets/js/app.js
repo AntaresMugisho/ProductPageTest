@@ -86,9 +86,9 @@ nav_btns.forEach((nav_btn, i) => {
 //+--------------------------------+
 //| PRICE INCREASE                 |
 //+--------------------------------+
-const unit_price = document.getElementById("unit_price").innerText
+const unit_price = document.getElementById("unit-price").innerText
 const quantity = document.getElementById("quantity")
-const total_amount = document.getElementById("total_amount")
+const total_amount = document.getElementById("total-amount")
 
 // Initialize the total price label
 total_amount.innerText = unit_price
