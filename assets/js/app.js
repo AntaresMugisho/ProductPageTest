@@ -1,7 +1,7 @@
 
 
 //+--------------------------------+
-//| NAV MENU ON MOBILE             |
+//| AUTO UPDATE FOOTER YEARS       |
 //+--------------------------------+
 
 let start_year = 2022
