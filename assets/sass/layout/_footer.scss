@@ -7,6 +7,7 @@ footer{
     text-align: center;
     background-color: $secondary_color;
     padding:40px;
+    font-weight:300;
 
     *{
         color:#f1f1f1;
@@ -18,5 +19,11 @@ footer{
 
     a:hover{
         color:$accent_color;
+    }
+
+    p.creative-mind{
+        font-family: CreativeMind;
+        font-size: fontSize(level_3);
+        opacity:.5;
     }
 }

@@ -198,6 +198,7 @@ footer {
   text-align: center;
   background-color: #333;
   padding: 40px;
+  font-weight: 300;
 }
 footer * {
   color: #f1f1f1;
@@ -208,7 +209,17 @@ footer a {
 footer a:hover {
   color: #f18100;
 }
+footer p.creative-mind {
+  font-family: CreativeMind;
+  font-size: 3.4rem;
+  opacity: 0.5;
+}
 
+@font-face {
+  font-family: CreativeMind;
+  src: url(../fonts/creative_mind.woff) format("woff");
+  src: url(../fonts/creative_mind.woff2) format("woff2");
+}
 .main-content {
   display: grid;
   grid-template-columns: repeat(auto-fit, 500px);

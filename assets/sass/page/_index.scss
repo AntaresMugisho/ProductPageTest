@@ -1,5 +1,11 @@
 
 
+@font-face {
+    font-family: CreativeMind;
+    src: url(../fonts/creative_mind.woff) format("woff");
+    src: url(../fonts/creative_mind.woff2) format("woff2");
+}
+
 .main-content{
     display:grid;
     grid-template-columns: repeat(auto-fit, 500px);
